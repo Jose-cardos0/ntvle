@@ -2,7 +2,7 @@ import logoprincipal from "../assets/logoprincipal.svg";
 
 export function Header() {
   return (
-    <header className="min-w-full min-h-10 bg-white flex justify-between items-center px-5 shadow-md">
+    <header className="min-w-full min-h-11 bg-white flex justify-between items-center px-5 shadow-md">
       <img
         className="max-w-24 cursor-pointer"
         src={logoprincipal}

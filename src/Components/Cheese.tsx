@@ -1,5 +1,5 @@
 //react
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 
 import * as THREE from "three";
 
@@ -19,12 +19,18 @@ function Cheese() {
   //   }
   // });
 
+  useEffect(() => {
+    if (cheeseRef.current) {
+      cheeseRef.current.rotation.y = (Math.PI / 180) * 270; // 45 graus
+    }
+  }, []);
+
   return (
     <primitive
       ref={cheeseRef}
       object={scene}
-      scale={0.8}
-      position={[0, -1, 0]}
+      scale={0.9}
+      position={[0, -1.5, 0]}
     />
   );
 }

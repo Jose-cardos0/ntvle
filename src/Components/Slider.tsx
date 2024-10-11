@@ -34,7 +34,11 @@ export function Slider() {
           <img src={leitesPropaganda} alt="Imagem 2" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={slidernossosprodutos} alt="Imagem 3" />
+          <img
+            className="w-5/6 mx-auto"
+            src={slidernossosprodutos}
+            alt="Imagem 3"
+          />
         </SwiperSlide>
       </Swiper>
     </div>
