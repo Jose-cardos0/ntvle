@@ -17,3 +17,12 @@
     opacity: 1;
   }
 }
+
+h1 {
+  text-shadow: 2px 0px 1px rgb(255, 255, 255);
+}
+
+#textoGsapQueijo3d {
+  opacity: 0;
+  transform: translateX(-200%);
+}
