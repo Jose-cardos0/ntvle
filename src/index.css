@@ -22,8 +22,17 @@ h1 {
   text-shadow: 2px 0px 1px rgb(255, 255, 255);
 }
 
-#textoGsapQueijo3d,
+#textoGsapQueijo3d {
+  opacity: 0;
+  transform: translateX(-200%);
+}
+
 #linhaProdutos {
   opacity: 0;
   transform: translateX(-200%);
+}
+
+#queijoMussarela3D {
+  opacity: 0;
+  transform: translateX(200%);
 }

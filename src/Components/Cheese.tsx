@@ -45,9 +45,10 @@ export function Cheese3D() {
       {/*controle da câmera */}
       <OrbitControls />
       {/* intensidade da luz no ambiente */}
-      <ambientLight intensity={3} />
+      <ambientLight intensity={2} />
       {/* moveu a luz para mais perto e aumentou a intensidade*/}
-      <spotLight position={[5, 10, 5]} angle={0.3} intensity={25} />
+      <spotLight position={[2, 10, 5]} angle={0.3} intensity={100} />
+      <spotLight position={[1, 5, 5]} angle={0.6} intensity={100} />
       {/* adicionando direção da luz */}
       <directionalLight
         position={[10, 10, 0]}
