@@ -1,4 +1,4 @@
-Inicializador npm start<br/>
+Inicializador npm run dev<br/>
 
 instalações necessárias <br/>
 
