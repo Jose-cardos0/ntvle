@@ -35,7 +35,7 @@ export function Slider() {
         </SwiperSlide>
         <SwiperSlide>
           <img
-            className="w-5/6 mx-auto"
+            className="w-2/3 mx-auto"
             src={slidernossosprodutos}
             alt="Imagem 3"
           />

@@ -15,7 +15,6 @@ import bebidaLac from "../assets/bglinhas/bebidaslac.png";
 import queijoProcs from "../assets/bglinhas/queijoProcess.png";
 import leiteConde from "../assets/bglinhas/leiteCondens.png";
 import cremeDeLeite from "../assets/bglinhas/cremeDeLeite.png";
-
 import vacaBracosAbertos from "../assets/vacaBracosAbertos.svg";
 
 //slider
@@ -28,9 +27,12 @@ import { Cheese3D } from "../Components/Cheese";
 import { LiaArrowAltCircleDownSolid } from "react-icons/lia";
 
 //gsap
-
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+//react-router
+import { Link } from "react-router-dom";
+import { Leites } from "./Produtos/LeiteUht/Leites";
 
 export function Home() {
   useLayoutEffect(() => {
@@ -55,7 +57,7 @@ export function Home() {
       duration: 6,
       scrollTrigger: {
         trigger: "#startScrollProdutos",
-        markers: true,
+        // markers: true,
         start: "top 300px",
         end: "bottom 1500px",
         scrub: true,
@@ -167,12 +169,14 @@ export function Home() {
             className="w-96 h-96  rounded-lg shadow-xl
            bg-cover bg-center items-center justify-center flex"
           >
-            <img
-              className="max-w-64 transition duration-300 hover:scale-105 
+            <Link to={"/leites"}>
+              <img
+                className="max-w-64 transition duration-300 hover:scale-105 
           cursor-pointer hover:drop-shadow-2xl"
-              src={leitesBg}
-              alt=""
-            />
+                src={leitesBg}
+                alt=""
+              />
+            </Link>
           </div>
           <div
             style={{ backgroundImage: `url(${desnBg})` }}
