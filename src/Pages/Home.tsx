@@ -37,9 +37,23 @@ export function Home() {
       duration: 6,
       scrollTrigger: {
         trigger: "#startScroll",
-        markers: true,
+        // markers: true,
         start: "top 200px",
         end: "bottom 850px",
+        scrub: true,
+      },
+    });
+
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to("#linhaProdutos", {
+      x: 0,
+      opacity: 1,
+      duration: 6,
+      scrollTrigger: {
+        trigger: "#startScrollProdutos",
+        // markers: true,
+        start: "top 500px",
+        end: "bottom 900px",
         scrub: true,
       },
     });
@@ -101,6 +115,7 @@ export function Home() {
         </div>
       </section>
       <section
+        id="startScrollProdutos"
         style={{
           backgroundImage: `url(${bgprodutos})`,
         }}
@@ -110,20 +125,71 @@ export function Home() {
         flex-col bg-cover bg-center "
       >
         <h1
+          id="linhaProdutos"
           style={{
             fontFamily: "Mocha Mattari W01 Regular",
           }}
           className="text-blue-900 font-bold text-8xl flex
-           items-center justify-center drop-shadow-2xl
+           items-center justify-center
+            drop-shadow-2xl 
            "
         >
           nossas linhas de produtos
         </h1>
         <div
-          className=" grid grid-cols-4 gap-6
+          className=" grid grid-cols-4  gap-6
          items-center justify-center
           m-auto "
         >
+          <div
+            style={{ backgroundImage: `url(${integralBg})` }}
+            className="w-96 h-96  rounded-lg shadow-xl
+           bg-cover bg-center items-center justify-center flex"
+          >
+            <img
+              className="max-w-64 transition duration-300 hover:scale-105 
+          cursor-pointer hover:drop-shadow-2xl"
+              src={leitesBg}
+              alt=""
+            />
+          </div>
+          <div
+            style={{ backgroundImage: `url(${desnBg})` }}
+            className="w-96 h-96  rounded-lg shadow-xl
+           bg-cover bg-center items-center justify-center flex"
+          >
+            <img
+              className="max-w-96 transition duration-300 hover:scale-105 
+          cursor-pointer hover:drop-shadow-2xl"
+              src={queijosBg}
+              alt=""
+            />
+          </div>
+          <div
+            style={{ backgroundImage: `url(${zeroBg})` }}
+            className="w-96 h-96  rounded-lg shadow-xl
+           bg-cover bg-center items-center justify-center flex"
+          >
+            <img
+              className="max-w-64 transition duration-300 hover:scale-105 
+          cursor-pointer hover:drop-shadow-2xl"
+              src={manteigasBg}
+              alt=""
+            />
+          </div>
+          <div
+            style={{ backgroundImage: `url(${integralBg2})` }}
+            className="w-96 h-96  rounded-lg shadow-xl
+           bg-cover bg-center items-center justify-center flex"
+          >
+            <img
+              className=" transition duration-300 hover:scale-105 
+          cursor-pointer hover:drop-shadow-2xl"
+              src={leitesEmPo}
+              alt=""
+            />
+          </div>
+          {/*repetidos */}
           <div
             style={{ backgroundImage: `url(${integralBg})` }}
             className="w-96 h-96  rounded-lg shadow-xl
