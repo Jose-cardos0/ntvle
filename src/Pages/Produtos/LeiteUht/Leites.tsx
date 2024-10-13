@@ -57,6 +57,10 @@ export function Leites() {
         scrub: true,
       },
     });
+
+    return () => {
+      gsap.killTweensOf("#leiteIntegralScroll", "#leitedesnatScroll");
+    };
   }, []);
 
   const TypingEffect = () => {
