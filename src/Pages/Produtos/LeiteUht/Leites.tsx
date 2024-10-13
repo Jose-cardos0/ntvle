@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useLayoutEffect } from "react";
 import bacgroundPagLeites from "../../../assets/assetsLeite/bacgroundPagLeites.svg";
 import leites from "../../../assets/assetsLeite/leites3.png";
 import leiteuhtIntegral from "../../../assets/assetsLeite/leiteuhtIntegral.png";
@@ -10,7 +10,55 @@ import { SliderLeitesIntegral } from "../../../Components/SliderLeitesIntegral";
 import { SliderLeitesDesnatado } from "../../../Components/SliderLeitesDesnatados";
 import { SliderLeitesZero } from "../../../Components/SliderLeitesZeroLactose";
 
+//gsap
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 export function Leites() {
+  useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to("#leiteIntegralScroll", {
+      x: 0,
+      opacity: 1,
+      duration: 6,
+      scrollTrigger: {
+        trigger: "#leiteIntegral",
+        // markers: true,
+        start: "top 500px",
+        end: "bottom 1100px",
+        scrub: true,
+      },
+    });
+
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to("#leitedesnatScroll", {
+      x: 0,
+      opacity: 1,
+      duration: 6,
+      scrollTrigger: {
+        trigger: "#leiteDesnatado",
+        // markers: true,
+        start: "top 500px",
+        end: "bottom 1100px",
+        scrub: true,
+      },
+    });
+
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to("#leitezeroScroll", {
+      x: 0,
+      opacity: 1,
+      duration: 6,
+      scrollTrigger: {
+        trigger: "#leiteZeroLactose",
+        // markers: true,
+        start: "top 500px",
+        end: "bottom 1100px",
+        scrub: true,
+      },
+    });
+  }, []);
+
   const TypingEffect = () => {
     const [text, setText] = useState("");
     const [isDeleting, setIsDeleting] = useState(false);
@@ -108,7 +156,10 @@ export function Leites() {
         id="leiteIntegral"
         className="flex-col  min-w-full items-center justify-center mt-44"
       >
-        <div className="flex items-center justify-center m-auto">
+        <div
+          id="leiteIntegralScroll"
+          className="flex items-center justify-center m-auto"
+        >
           <div className="w-1/5">
             <SliderLeitesIntegral />
           </div>
@@ -281,7 +332,10 @@ export function Leites() {
         id="leiteDesnatado"
         className="flex-col  min-w-full items-center justify-center mt-44"
       >
-        <div className="flex items-center justify-center m-auto">
+        <div
+          id="leitedesnatScroll"
+          className="flex items-center justify-center m-auto"
+        >
           <div className="w-1/5">
             <SliderLeitesDesnatado />
           </div>
@@ -454,7 +508,10 @@ export function Leites() {
         id="leiteZeroLactose"
         className="flex-col  min-w-full items-center justify-center mt-44"
       >
-        <div className="flex items-center justify-center m-auto">
+        <div
+          id="leitezeroScroll"
+          className="flex items-center justify-center m-auto"
+        >
           <div className="w-1/5">
             <SliderLeitesZero />
           </div>
