@@ -31,7 +31,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 //react-router
-import { Link } from "react-router-dom";
+import { Link, replace } from "react-router-dom";
 import { Leites } from "./Produtos/LeiteUht/Leites";
 
 export function Home() {
@@ -169,7 +169,7 @@ export function Home() {
             className="w-96 h-96  rounded-lg shadow-xl
            bg-cover bg-center items-center justify-center flex"
           >
-            <Link to={"/leites"}>
+            <Link to={"/leites"} replace={true}>
               <img
                 className="max-w-64 transition duration-300 hover:scale-105 
           cursor-pointer hover:drop-shadow-2xl"

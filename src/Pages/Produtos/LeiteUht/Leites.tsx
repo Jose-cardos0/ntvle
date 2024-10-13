@@ -131,13 +131,23 @@ export function Leites() {
                cursor-pointer transition duration-300 hover:scale-105 hover:z-50 -rotate-3"
               src={leiteuhtIntegral}
               alt="leite unt integral"
-              onClick={() => (window.location.hash = "#leiteIntegral")}
+              onClick={() => {
+                const clickLink = document.getElementById("leiteIntegral");
+                if (clickLink) {
+                  clickLink.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
             />
             <img
               className="absolute drop-shadow-2xl left-64 z-20 cursor-pointer transition duration-300 hover:scale-105 hover:z-50 "
               src={leiteuhtDesnatado}
               alt="leite uht desnatado"
-              onClick={() => (window.location.hash = "#leiteDesnatado")}
+              onClick={() => {
+                const clickLink = document.getElementById("leiteDesnatado");
+                if (clickLink) {
+                  clickLink.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
             />
             <div className=" flex items-center justify-center relative left-96 top-40 ">
               <img
@@ -145,7 +155,12 @@ export function Leites() {
                  duration-300 hover:scale-105 hover:z-50"
                 src={leiteuhtZeroLactose}
                 alt="leite uht zero lactose"
-                onClick={() => (window.location.hash = "#leiteZeroLactose")}
+                onClick={() => {
+                  const clickLink = document.getElementById("leiteZeroLactose");
+                  if (clickLink) {
+                    clickLink.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
               />
             </div>
           </div>
