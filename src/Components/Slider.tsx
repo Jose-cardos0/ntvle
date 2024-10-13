@@ -1,7 +1,6 @@
-//logos
+//sliders
 import logoHeader from "../assets/logoHeader.svg";
 import leitesPropaganda from "../assets/leitesPropaganda.svg";
-// import conhecaOsProdutos from "../assets/conhecaOsProdutos.svg";
 import slidernossosprodutos from "../assets/slidernossosprodutos.png";
 
 //swiper
