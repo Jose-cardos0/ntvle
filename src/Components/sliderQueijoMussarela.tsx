@@ -7,11 +7,11 @@ import "swiper/css/autoplay";
 import { Autoplay, Navigation, Pagination, Scrollbar } from "swiper/modules";
 
 //imgs
-import leiteUhtIntegral1 from "../assets/assetsLeite/leiteUhtIntegral1.png";
-import leiteUhtIntegral2 from "../assets/assetsLeite/leiteUhtIntegral2.png";
-import leiteUhtIntegral3 from "../assets/assetsLeite/leiteUhtIntegral3.png";
+import queijoMussarela1 from "../assets/assetsQueijos/mussarela1.png";
+import queijoMussarela2 from "../assets/assetsQueijos/mussarela2.png";
+import queijoMussarela3 from "../assets/assetsQueijos/mussarela3.png";
 
-export function SliderLeitesIntegral() {
+export function SliderQueijoMussarela() {
   return (
     <div className=" flex h-full ">
       <Swiper
@@ -26,26 +26,26 @@ export function SliderLeitesIntegral() {
           disableOnInteraction: false,
         }}
       >
-        <div className="flex items-center justify-center ">
+        <div className="flex items-center justify-center">
           <SwiperSlide>
             <img
-              className="flex w-10/12 items-center justify-center ml-8 drop-shadow-2xl"
-              src={leiteUhtIntegral1}
-              alt="leiteUhtIntegral1"
+              className="flex  items-center justify-center ml-8 drop-shadow-2xl"
+              src={queijoMussarela1}
+              alt="queijo mussarela"
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
               className="drop-shadow-md"
-              src={leiteUhtIntegral2}
-              alt="leiteUhtIntegral2"
+              src={queijoMussarela2}
+              alt="queijo mussarela"
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
               className="drop-shadow-md"
-              src={leiteUhtIntegral3}
-              alt="leiteUhtIntegral3"
+              src={queijoMussarela3}
+              alt="queijo mussarela"
             />
           </SwiperSlide>
         </div>

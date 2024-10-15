@@ -1,14 +1,14 @@
 import { useState, useEffect, useLayoutEffect } from "react";
-import bacgroundPagLeites from "../../../assets/assetsLeite/bacgroundPagLeites.svg";
-import leites from "../../../assets/assetsLeite/leites3.png";
-import leiteuhtIntegral from "../../../assets/assetsLeite/leiteuhtIntegral.png";
-import leiteuhtDesnatado from "../../../assets/assetsLeite/leiteuhtDesnatado.png";
-import leiteuhtZeroLactose from "../../../assets/assetsLeite/leiteuhtZeroLactose.png";
+import bacgroundPagQueijos from "../../../assets/assetsQueijos/backgroundQuijos.svg";
+
+import queijoMussarela from "../../../assets/assetsQueijos/mussarela3.png";
+import queijoPrato from "../../../assets/assetsQueijos/prato3.png";
+import queijoCoalho from "../../../assets/assetsQueijos/coalho1.png";
 
 //components
-import { SliderLeitesIntegral } from "../../../Components/SliderLeitesIntegral";
-import { SliderLeitesDesnatado } from "../../../Components/SliderLeitesDesnatados";
-import { SliderLeitesZero } from "../../../Components/SliderLeitesZeroLactose";
+import { SliderQueijoMussarela } from "../../../Components/sliderQueijoMussarela";
+import { SliderQueijoPrato } from "../../../Components/SliderQueijoPrato";
+import { SliderQueijoCoalho } from "../../../Components/SliderQueijoCoalho";
 
 //gsap
 import gsap from "gsap";
@@ -17,49 +17,21 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 export function Queijos() {
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    gsap.to("#leiteIntegralScroll", {
+    gsap.to("#queijoMussarelaScroll", {
       x: 0,
       opacity: 1,
       duration: 6,
       scrollTrigger: {
-        trigger: "#leiteIntegral",
-        // markers: true,
-        start: "top 500px",
-        end: "bottom 1100px",
-        scrub: true,
-      },
-    });
-
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.to("#leitedesnatScroll", {
-      x: 0,
-      opacity: 1,
-      duration: 6,
-      scrollTrigger: {
-        trigger: "#leiteDesnatado",
-        // markers: true,
-        start: "top 500px",
-        end: "bottom 1100px",
-        scrub: true,
-      },
-    });
-
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.to("#leitezeroScroll", {
-      x: 0,
-      opacity: 1,
-      duration: 6,
-      scrollTrigger: {
-        trigger: "#leiteZeroLactose",
-        // markers: true,
-        start: "top 500px",
-        end: "bottom 1100px",
+        trigger: "#queijoMussarelaSection",
+        markers: true,
+        start: "top 700px",
+        end: "bottom 900px",
         scrub: true,
       },
     });
 
     return () => {
-      gsap.killTweensOf("#leiteIntegralScroll", "#leitedesnatScroll");
+      gsap.killTweensOf("#queijoMussarelaScroll");
     };
   }, []);
 
@@ -108,7 +80,7 @@ export function Queijos() {
   return (
     <main
       style={{
-        backgroundImage: `url(${bacgroundPagLeites})`,
+        backgroundImage: `url(${bacgroundPagQueijos})`,
       }}
       className="min-h-screen bg-no-repeat bg-cover"
     >
@@ -131,36 +103,40 @@ export function Queijos() {
           /> */}
           <div className="relative w-3/4 h-full flex items-center justify-between">
             <img
-              className="absolute drop-shadow-2xl z-10 left-0
+              className="absolute drop-shadow-2xl z-10 left-0 
                cursor-pointer transition duration-300 hover:scale-105 hover:z-50 -rotate-3"
-              src={leiteuhtIntegral}
-              alt="leite unt integral"
+              src={queijoMussarela}
+              alt="queijo mussarela"
               onClick={() => {
-                const clickLink = document.getElementById("leiteIntegral");
+                const clickLink = document.getElementById(
+                  "queijoMussarelaSection"
+                );
                 if (clickLink) {
                   clickLink.scrollIntoView({ behavior: "smooth" });
                 }
               }}
             />
             <img
-              className="absolute drop-shadow-2xl left-64 z-20 cursor-pointer transition duration-300 hover:scale-105 hover:z-50 "
-              src={leiteuhtDesnatado}
-              alt="leite uht desnatado"
+              className="absolute drop-shadow-2xl left-64 z-20 bottom-7 cursor-pointer transition duration-300 hover:scale-105 hover:z-50 "
+              src={queijoPrato}
+              alt="queijo prato"
               onClick={() => {
-                const clickLink = document.getElementById("leiteDesnatado");
+                const clickLink = document.getElementById("queijoPratoSection");
                 if (clickLink) {
                   clickLink.scrollIntoView({ behavior: "smooth" });
                 }
               }}
             />
-            <div className=" flex items-center justify-center relative left-96 top-40 ">
+            <div className=" flex items-center justify-center relative left-60 bottom-44 ">
               <img
-                className="z-50 cursor-pointer drop-shadow-xl transition
+                className="cursor-pointer drop-shadow-xl transition
                  duration-300 hover:scale-105 hover:z-50"
-                src={leiteuhtZeroLactose}
-                alt="leite uht zero lactose"
+                src={queijoCoalho}
+                alt="queijo de coalho"
                 onClick={() => {
-                  const clickLink = document.getElementById("leiteZeroLactose");
+                  const clickLink = document.getElementById(
+                    "queijoDeCoalhoSection"
+                  );
                   if (clickLink) {
                     clickLink.scrollIntoView({ behavior: "smooth" });
                   }
@@ -170,32 +146,35 @@ export function Queijos() {
           </div>
         </div>
       </section>
-      {/*LEITE INTEGRAL */}
+      {/*QUEIJO MUSSARELA*/}
       <section
-        id="leiteIntegral"
-        className="flex-col  min-w-full items-center justify-center mt-44"
+        id="queijoMussarelaSection"
+        className="flex-col  
+        min-w-full py-10 items-center justify-center m-auto"
       >
+        <div className="flex items-center justify-center m-auto">
+          <h1
+            style={{ fontFamily: "Mocha Mattari W01 Regular" }}
+            className="text-8xl text-center w-full text-blue-800 "
+          >
+            queijo mussarela
+          </h1>
+        </div>
         <div
-          id="leiteIntegralScroll"
+          id="queijoMussarelaScroll"
           className="flex items-center justify-center m-auto"
         >
-          <div className="w-1/5">
-            <SliderLeitesIntegral />
+          <div className="z-0 w-2/4">
+            <SliderQueijoMussarela />
           </div>
-          <div className="w-3/5 flex items-center justify-center">
-            <div>
-              <h1
-                style={{ fontFamily: "Mocha Mattari W01 Regular" }}
-                className="text-8xl text-blue-800  flex mb-10"
-              >
-                leite uht integral
-              </h1>
+          <div className=" flex items-center justify-center z-50">
+            <div className="w-full">
               {/*TABELA NUTRICIONAL*/}
               <h1
                 style={{ fontFamily: "Mocha Mattari W01 Regular" }}
                 className="text-5xl text-blue-800 text-center"
               >
-                tabela nutricional
+                informações técnicas
               </h1>
               <div className="overflow-x-auto shadow-2xl">
                 <div className="bg-blue-100 p-2">
@@ -303,7 +282,7 @@ export function Queijos() {
             </div>
             <div className="flex-col items-center justify-center ml-4">
               <div>
-                <h2 className="text-white font-semibold text-xl uppercase">
+                <h2 className="text-blue-800 font-semibold text-xl uppercase">
                   Ingredientes
                 </h2>
                 <p className="">
@@ -320,7 +299,7 @@ export function Queijos() {
                 </h2>
               </div>
               <div>
-                <h2 className="text-white font-semibold text-xl uppercase">
+                <h2 className="text-blue-800  font-semibold text-xl uppercase">
                   conservação
                 </h2>
                 <p className="">• Conservar em local seco e arejado.</p>
@@ -330,7 +309,7 @@ export function Queijos() {
                 <p className="">• Não é necessário ferver este leite.</p>
               </div>
               <div>
-                <h2 className="text-white font-semibold text-xl uppercase">
+                <h2 className="text-blue-800  font-semibold text-xl uppercase">
                   dados técnicos
                 </h2>
                 <div>
@@ -346,26 +325,28 @@ export function Queijos() {
           </div>
         </div>
       </section>
-      {/*LEITE DESNATADO */}
+      {/*QUEIJO PRATO */}
       <section
-        id="leiteDesnatado"
-        className="flex-col  min-w-full items-center justify-center mt-44"
+        id="queijoPratoSection"
+        className="flex-col  min-w-full py-10 items-center justify-center mt-44"
       >
+        <div className="flex items-center justify-center">
+          <h1
+            style={{ fontFamily: "Mocha Mattari W01 Regular" }}
+            className="text-8xl text-center w-full text-blue-800 "
+          >
+            queijo prato
+          </h1>
+        </div>
         <div
-          id="leitedesnatScroll"
+          id="queijoPratoScroll"
           className="flex items-center justify-center m-auto"
         >
-          <div className="w-1/5">
-            <SliderLeitesDesnatado />
+          <div className="z-0 w-2/4">
+            <SliderQueijoPrato />
           </div>
-          <div className="w-3/5 flex items-center justify-center">
-            <div>
-              <h1
-                style={{ fontFamily: "Mocha Mattari W01 Regular" }}
-                className="text-8xl text-blue-800  flex mb-10"
-              >
-                leite uht desnatado
-              </h1>
+          <div className="z-50 flex items-center justify-center">
+            <div className="w-full">
               {/*TABELA NUTRICIONAL*/}
               <h1
                 style={{ fontFamily: "Mocha Mattari W01 Regular" }}
@@ -479,7 +460,7 @@ export function Queijos() {
             </div>
             <div className="flex-col items-center justify-center ml-4">
               <div>
-                <h2 className="text-white font-semibold text-xl uppercase">
+                <h2 className="text-blue-800  font-semibold text-xl uppercase">
                   Ingredientes
                 </h2>
                 <p className="">
@@ -496,7 +477,7 @@ export function Queijos() {
                 </h2>
               </div>
               <div>
-                <h2 className="text-white font-semibold text-xl uppercase">
+                <h2 className="text-blue-800  font-semibold text-xl uppercase">
                   conservação
                 </h2>
                 <p className="">• Conservar em local seco e arejado.</p>
@@ -506,7 +487,7 @@ export function Queijos() {
                 <p className="">• Não é necessário ferver este leite.</p>
               </div>
               <div>
-                <h2 className="text-white font-semibold text-xl uppercase">
+                <h2 className="text-blue-800  font-semibold text-xl uppercase">
                   dados técnicos
                 </h2>
                 <div>
@@ -522,27 +503,28 @@ export function Queijos() {
           </div>
         </div>
       </section>
-      {/*ZERO LACTOSE */}
+      {/*QUEIJO DE COALHO */}
       <section
-        id="leiteZeroLactose"
-        className="flex-col  min-w-full items-center justify-center mt-44"
+        id="queijoDeCoalhoSection"
+        className="flex-col  min-w-full py-10 items-center justify-center mt-44"
       >
+        <div className="flex items-center justify-center">
+          <h1
+            style={{ fontFamily: "Mocha Mattari W01 Regular" }}
+            className="text-8xl text-center w-full text-blue-800 "
+          >
+            queijo de coalho
+          </h1>
+        </div>
         <div
-          id="leitezeroScroll"
+          id="queijoDeCoalhoScroll"
           className="flex items-center justify-center m-auto"
         >
-          <div className="w-1/5">
-            <SliderLeitesZero />
+          <div className="z-0 w-2/4">
+            <SliderQueijoCoalho />
           </div>
-          <div className="w-3/5 flex items-center justify-center">
-            <div>
-              <h1
-                style={{ fontFamily: "Mocha Mattari W01 Regular" }}
-                className="text-8xl text-blue-800  flex mb-10"
-              >
-                leite uht zero lactose
-              </h1>
-
+          <div className="z-50 flex items-center justify-center">
+            <div className="w-full">
               {/*TABELA NUTRICIONAL*/}
               <h1
                 style={{ fontFamily: "Mocha Mattari W01 Regular" }}
@@ -656,7 +638,7 @@ export function Queijos() {
             </div>
             <div className="flex-col items-center justify-center ml-4">
               <div>
-                <h2 className="text-white font-semibold text-xl uppercase">
+                <h2 className="text-blue-800  font-semibold text-xl uppercase">
                   Ingredientes
                 </h2>
                 <p className="">
@@ -669,11 +651,11 @@ export function Queijos() {
                 <h2 className="font-semibold">
                   NÃO CONTÉM GLÚTEN. <br />
                   ALÉRGICOS: CONTÉM LEITE, <br />
-                  NÃO CONTÉM LACTOSE.
+                  CONTÉM LACTOSE.
                 </h2>
               </div>
               <div>
-                <h2 className="text-white font-semibold text-xl uppercase">
+                <h2 className="text-blue-800  font-semibold text-xl uppercase">
                   conservação
                 </h2>
                 <p className="">• Conservar em local seco e arejado.</p>
@@ -683,7 +665,7 @@ export function Queijos() {
                 <p className="">• Não é necessário ferver este leite.</p>
               </div>
               <div>
-                <h2 className="text-white font-semibold text-xl uppercase">
+                <h2 className="text-blue-800  font-semibold text-xl uppercase">
                   dados técnicos
                 </h2>
                 <div>

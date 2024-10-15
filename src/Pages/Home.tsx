@@ -80,7 +80,7 @@ export function Home() {
         className="bg-no-repeat h-screen calc(100vh - 2.75rem)
          bg-bottom min-w-full
        flex items-center justify-center bg-[#56bac8] flex-col 
-       relative bg-fixed "
+       relative bg-fixed"
       >
         <Slider />
         <button

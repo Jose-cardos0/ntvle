@@ -15,53 +15,53 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export function Leites() {
-  useLayoutEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.to("#leiteIntegralScroll", {
-      x: 0,
-      opacity: 1,
-      duration: 6,
-      scrollTrigger: {
-        trigger: "#leiteIntegral",
-        // markers: true,
-        start: "top 500px",
-        end: "bottom 1100px",
-        scrub: true,
-      },
-    });
+  // useLayoutEffect(() => {
+  //   gsap.registerPlugin(ScrollTrigger);
+  //   gsap.to("#leiteIntegralScroll", {
+  //     x: 0,
+  //     opacity: 1,
+  //     duration: 6,
+  //     scrollTrigger: {
+  //       trigger: "#leiteIntegral",
+  //       // markers: true,
+  //       start: "top 500px",
+  //       end: "bottom 1100px",
+  //       scrub: true,
+  //     },
+  //   });
 
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.to("#leitedesnatScroll", {
-      x: 0,
-      opacity: 1,
-      duration: 6,
-      scrollTrigger: {
-        trigger: "#leiteDesnatado",
-        // markers: true,
-        start: "top 500px",
-        end: "bottom 1100px",
-        scrub: true,
-      },
-    });
+  //   gsap.registerPlugin(ScrollTrigger);
+  //   gsap.to("#leitedesnatScroll", {
+  //     x: 0,
+  //     opacity: 1,
+  //     duration: 6,
+  //     scrollTrigger: {
+  //       trigger: "#leiteDesnatado",
+  //       // markers: true,
+  //       start: "top 500px",
+  //       end: "bottom 1100px",
+  //       scrub: true,
+  //     },
+  //   });
 
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.to("#leitezeroScroll", {
-      x: 0,
-      opacity: 1,
-      duration: 6,
-      scrollTrigger: {
-        trigger: "#leiteZeroLactose",
-        // markers: true,
-        start: "top 500px",
-        end: "bottom 1100px",
-        scrub: true,
-      },
-    });
+  //   gsap.registerPlugin(ScrollTrigger);
+  //   gsap.to("#leitezeroScroll", {
+  //     x: 0,
+  //     opacity: 1,
+  //     duration: 6,
+  //     scrollTrigger: {
+  //       trigger: "#leiteZeroLactose",
+  //       // markers: true,
+  //       start: "top 500px",
+  //       end: "bottom 1100px",
+  //       scrub: true,
+  //     },
+  //   });
 
-    return () => {
-      gsap.killTweensOf("#leiteIntegralScroll", "#leitedesnatScroll");
-    };
-  }, []);
+  //   return () => {
+  //     gsap.killTweensOf("#leiteIntegralScroll", "#leitedesnatScroll");
+  //   };
+  // }, []);
 
   const TypingEffect = () => {
     const [text, setText] = useState("");
@@ -156,7 +156,7 @@ export function Leites() {
             <div className=" flex items-center justify-center relative left-96 top-40 ">
               <img
                 className="z-50 cursor-pointer drop-shadow-xl transition
-                 duration-300 hover:scale-105 hover:z-50"
+                 duration-300 hover:scale-105 hover:z-50 mb-36"
                 src={leiteuhtZeroLactose}
                 alt="leite uht zero lactose"
                 onClick={() => {
@@ -173,7 +173,7 @@ export function Leites() {
       {/*LEITE INTEGRAL */}
       <section
         id="leiteIntegral"
-        className="flex-col  min-w-full items-center justify-center mt-44"
+        className="flex-col  min-w-full items-center justify-center min-h-screen m-auto mt-44"
       >
         <div className="flex items-center justify-center">
           <h1
@@ -187,10 +187,10 @@ export function Leites() {
           id="leiteIntegralScroll"
           className="flex items-center justify-center m-auto"
         >
-          <div className="w-1/5">
+          <div className="max-w-80">
             <SliderLeitesIntegral />
           </div>
-          <div className="w-3/5 flex items-center justify-center">
+          <div className="w-3/6 flex items-center justify-center">
             <div>
               {/*TABELA NUTRICIONAL*/}
               <h1
@@ -352,7 +352,7 @@ export function Leites() {
       {/*LEITE DESNATADO */}
       <section
         id="leiteDesnatado"
-        className="flex-col  min-w-full items-center justify-center mt-44"
+        className="flex-col  min-w-full min-h-screen items-center justify-center"
       >
         <div className="flex items-center justify-center">
           <h1
@@ -366,10 +366,10 @@ export function Leites() {
           id="leitedesnatScroll"
           className="flex items-center justify-center m-auto"
         >
-          <div className="w-1/5">
+          <div className="max-w-80">
             <SliderLeitesDesnatado />
           </div>
-          <div className="w-3/5 flex items-center justify-center">
+          <div className="w-3/6 flex items-center justify-center">
             <div>
               {/*TABELA NUTRICIONAL*/}
               <h1
@@ -531,7 +531,7 @@ export function Leites() {
       {/*ZERO LACTOSE */}
       <section
         id="leiteZeroLactose"
-        className="flex-col  min-w-full items-center justify-center mt-44"
+        className="flex-col  min-w-full items-center justify-center "
       >
         <div className="flex items-center justify-center">
           <h1
@@ -545,10 +545,10 @@ export function Leites() {
           id="leitezeroScroll"
           className="flex items-center justify-center m-auto"
         >
-          <div className="w-1/5">
+          <div className="max-w-80">
             <SliderLeitesZero />
           </div>
-          <div className="w-3/5 flex items-center justify-center">
+          <div className="w-3/6 flex items-center justify-center ">
             <div>
               {/*TABELA NUTRICIONAL*/}
               <h1
