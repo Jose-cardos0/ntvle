@@ -14,7 +14,7 @@ import { SliderLeitesZero } from "../../../Components/SliderLeitesZeroLactose";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-export function Leites() {
+export function Queijos() {
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     gsap.to("#leiteIntegralScroll", {
@@ -69,7 +69,7 @@ export function Leites() {
     const [loopNum, setLoopNum] = useState(0);
     const [typingSpeed, setTypingSpeed] = useState(150);
 
-    const phrases = ["linha leites uht"];
+    const phrases = ["linha de queijos"];
 
     useEffect(() => {
       const handleTyping = () => {
@@ -175,14 +175,6 @@ export function Leites() {
         id="leiteIntegral"
         className="flex-col  min-w-full items-center justify-center mt-44"
       >
-        <div className="flex items-center justify-center">
-          <h1
-            style={{ fontFamily: "Mocha Mattari W01 Regular" }}
-            className="text-8xl text-center w-full text-blue-800 "
-          >
-            leite uht integral
-          </h1>
-        </div>
         <div
           id="leiteIntegralScroll"
           className="flex items-center justify-center m-auto"
@@ -192,6 +184,12 @@ export function Leites() {
           </div>
           <div className="w-3/5 flex items-center justify-center">
             <div>
+              <h1
+                style={{ fontFamily: "Mocha Mattari W01 Regular" }}
+                className="text-8xl text-blue-800  flex mb-10"
+              >
+                leite uht integral
+              </h1>
               {/*TABELA NUTRICIONAL*/}
               <h1
                 style={{ fontFamily: "Mocha Mattari W01 Regular" }}
@@ -303,7 +301,6 @@ export function Leites() {
                 </div>
               </div>
             </div>
-
             <div className="flex-col items-center justify-center ml-4">
               <div>
                 <h2 className="text-white font-semibold text-xl uppercase">
@@ -354,14 +351,6 @@ export function Leites() {
         id="leiteDesnatado"
         className="flex-col  min-w-full items-center justify-center mt-44"
       >
-        <div className="flex items-center justify-center">
-          <h1
-            style={{ fontFamily: "Mocha Mattari W01 Regular" }}
-            className="text-8xl text-center w-full text-blue-800 "
-          >
-            leite uht desnatado
-          </h1>
-        </div>
         <div
           id="leitedesnatScroll"
           className="flex items-center justify-center m-auto"
@@ -371,6 +360,12 @@ export function Leites() {
           </div>
           <div className="w-3/5 flex items-center justify-center">
             <div>
+              <h1
+                style={{ fontFamily: "Mocha Mattari W01 Regular" }}
+                className="text-8xl text-blue-800  flex mb-10"
+              >
+                leite uht desnatado
+              </h1>
               {/*TABELA NUTRICIONAL*/}
               <h1
                 style={{ fontFamily: "Mocha Mattari W01 Regular" }}
@@ -482,7 +477,6 @@ export function Leites() {
                 </div>
               </div>
             </div>
-
             <div className="flex-col items-center justify-center ml-4">
               <div>
                 <h2 className="text-white font-semibold text-xl uppercase">
@@ -533,14 +527,6 @@ export function Leites() {
         id="leiteZeroLactose"
         className="flex-col  min-w-full items-center justify-center mt-44"
       >
-        <div className="flex items-center justify-center">
-          <h1
-            style={{ fontFamily: "Mocha Mattari W01 Regular" }}
-            className="text-8xl text-center w-full text-blue-800 "
-          >
-            leite uht zero lactose
-          </h1>
-        </div>
         <div
           id="leitezeroScroll"
           className="flex items-center justify-center m-auto"
@@ -550,6 +536,13 @@ export function Leites() {
           </div>
           <div className="w-3/5 flex items-center justify-center">
             <div>
+              <h1
+                style={{ fontFamily: "Mocha Mattari W01 Regular" }}
+                className="text-8xl text-blue-800  flex mb-10"
+              >
+                leite uht zero lactose
+              </h1>
+
               {/*TABELA NUTRICIONAL*/}
               <h1
                 style={{ fontFamily: "Mocha Mattari W01 Regular" }}

@@ -6,6 +6,7 @@ import { createBrowserRouter } from "react-router-dom";
 import { Home } from "./Pages/Home";
 import { Layout } from "./Components/Layout";
 import { Leites } from "./Pages/Produtos/LeiteUht/Leites";
+import { Queijos } from "./Pages/Produtos/Queijos/Queijos";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
       {
         path: "/leites",
         element: <Leites />,
+      },
+      {
+        path: "/queijos",
+        element: <Queijos />,
       },
     ],
   },

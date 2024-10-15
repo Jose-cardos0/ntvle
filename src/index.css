@@ -51,3 +51,17 @@ h1 {
   opacity: 0;
   transform: translateX(-200%);
 }
+
+/*suavizador de scrolls*/
+#textoGsapQueijo3d,
+#linhaProdutos,
+#queijoMussarela3D,
+#leiteIntegralScroll,
+#leitedesnatScroll,
+#leitezeroScroll {
+  will-change: transform, opacity;
+}
+
+#headerSlider {
+  height: calc(100vh- 2.75rem);
+}

@@ -37,14 +37,14 @@ import { Leites } from "./Produtos/LeiteUht/Leites";
 export function Home() {
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    gsap.to("#textoGsapQueijo3d", {
+    gsap.to(["#textoGsapQueijo3d", "#queijoMussarela3D"], {
       x: 0,
       opacity: 1,
       duration: 6,
       scrollTrigger: {
         trigger: "#startScroll",
         // markers: true,
-        start: "top 200px",
+        start: "top 300px",
         end: "bottom 850px",
         scrub: true,
       },
@@ -58,28 +58,18 @@ export function Home() {
       scrollTrigger: {
         trigger: "#startScrollProdutos",
         // markers: true,
-        start: "top 300px",
-        end: "bottom 1500px",
-        scrub: true,
-      },
-    });
-
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.to("#queijoMussarela3D", {
-      x: 0,
-      opacity: 1,
-      duration: 6,
-      scrollTrigger: {
-        trigger: "#startScroll",
-        // markers: true,
-        start: "top 200px",
+        start: "top 450px",
         end: "bottom 850px",
         scrub: true,
       },
     });
 
     return () => {
-      gsap.killTweensOf("#textoGsapQueijo3d", "#linhaProdutos");
+      gsap.killTweensOf([
+        "#textoGsapQueijo3d",
+        "#linhaProdutos",
+        "#queijoMussarela3D",
+      ]);
     };
   }, []);
 
@@ -87,11 +77,12 @@ export function Home() {
     <main>
       <header
         style={{ backgroundImage: `url(${campo})` }}
-        className="bg-no-repeat bg-bottom min-h-screen min-w-full
-       flex items-center justify-center bg-[#56bac8] flex-col relative bg-fixed "
+        className="bg-no-repeat h-screen calc(100vh - 2.75rem)
+         bg-bottom min-w-full
+       flex items-center justify-center bg-[#56bac8] flex-col 
+       relative bg-fixed "
       >
         <Slider />
-
         <button
           onClick={() => {
             window.scrollTo({
@@ -101,13 +92,13 @@ export function Home() {
           }}
           className=" 
           rounded-full flex items-end animate-bounce
-          fixed bottom-10 right-5  z-50 cursor-pointer flex-col"
+          absolute bottom-10 right-5  z-50 cursor-pointer flex-col"
         >
           <div className="flex justify-center">
-            <img className="w-24 mr-5" src={vacaBracosAbertos} alt="" />
+            <img className="w-24 ml-5" src={vacaBracosAbertos} alt="" />
           </div>
           <div
-            className="flex items-center justify-center pr-1 min-h-9 bg-white shadow-2xl
+            className="flex items-center justify-center px-2 min-h-9 bg-white shadow-2xl
             rounded-full hover:bg-[#56bac8] hover:shadow-xl "
           >
             <LiaArrowAltCircleDownSolid size={25} color="#003fa5" />
@@ -160,7 +151,7 @@ export function Home() {
           nossas linhas de produtos
         </h1>
         <div
-          className=" grid grid-cols-3  gap-6
+          className=" grid grid-cols-4  gap-6
          items-center justify-center
           m-auto "
         >
